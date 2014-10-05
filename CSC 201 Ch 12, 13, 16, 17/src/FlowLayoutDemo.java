@@ -1,6 +1,11 @@
 import java.awt.*;
 import javax.swing.*;
-
+//Richard Cunningham
+//Problem Statement
+//Write a program that meets the following requirements.
+//Create a frame and set its layout to FlowLayout
+//Create two panels and add them to the frame
+//Each panel contains three buttons. The panel uses FlowLayout.
 @SuppressWarnings("serial")
 public class FlowLayoutDemo extends JFrame {
 	public static void main(String[] args)
