@@ -3,10 +3,12 @@ package atm;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+@SuppressWarnings("serial")
 public class ButtonAction extends ATM implements ActionListener
 {
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		@SuppressWarnings("deprecation")
 		String test = pinInput.getText();
 		if(e.getSource()==buttonNum1||e.getSource()==buttonNum2||e.getSource()==buttonNum3||e.getSource()==buttonNum4||e.getSource()==buttonNum5||e.getSource()==buttonNum6||e.getSource()==buttonNum7||e.getSource()==buttonNum8||e.getSource()==buttonNum9||e.getSource()==buttonNum0)
 		{
