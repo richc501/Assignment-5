@@ -19,6 +19,8 @@ public class ATM extends JFrame{
 	public static JButton buttonNum0 = new JButton("0");
 	public static JButton buttonEnter = new JButton("Enter");
 	public static JPasswordField pinInput = new JPasswordField();
+	public int trailsLeft=3;
+	public int trails;
 	public ATM()
 	{
 		setTitle("ATM PIN AUTHENTICATION");
@@ -45,6 +47,7 @@ public class ATM extends JFrame{
 		buttonPanel.add(buttonEnter);
 		ButtonAction action = new ButtonAction();
 		ClearAction clearText = new ClearAction();
+		EnterAction enterAction = new EnterAction();
 		buttonNum1.addActionListener(action);
 		buttonNum2.addActionListener(action);
 		buttonNum3.addActionListener(action);
@@ -56,6 +59,7 @@ public class ATM extends JFrame{
 		buttonNum9.addActionListener(action);
 		buttonNum0.addActionListener(action);
 		buttonClear.addActionListener(clearText);
+		buttonEnter.addActionListener(enterAction);
 		frame.setLayout(new BorderLayout());
 		frame.add(buttonPanel,BorderLayout.SOUTH);
 		frame.add(pinInput,BorderLayout.NORTH);
