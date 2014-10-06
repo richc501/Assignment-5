@@ -14,30 +14,39 @@ public class ScrollBarDemo extends JFrame{
 	public static JLabel redLabel = new JLabel("Red");
 	public static JLabel greenLabel = new JLabel("Green");
 	public static JLabel blueLabel = new JLabel("Blue");
-//	public static JScrollBar redScrollBar = new JScrollBar(JScrollBar.VERTICAL);
-//	public static JScrollBar greenScrollBar = new JScrollBar();
-//	public static JScrollBar blueScrollBar = new JScrollBar();
+	public static JSlider redSlider = new JSlider(JSlider.HORIZONTAL);
+	public static JSlider greenSlider = new JSlider(JSlider.HORIZONTAL);
+	public static JSlider blueSlider  = new JSlider(JSlider.HORIZONTAL);
+	public ScrollBarDemo()
+	{
+		redSlider.setMaximum(255);//set max values
+		greenSlider.setMaximum(255);
+		blueSlider.setMaximum(255);
+	}
 	public static void main(String[] args)
 	{
-		JScrollBar redScrollBar = new JScrollBar(JScrollBar.VERTICAL,30, 40, 0, 300);
-		JScrollBar greenScrollBar = new JScrollBar(JScrollBar.VERTICAL);
-		JScrollBar blueScrollBar = new JScrollBar(JScrollBar.VERTICAL);
+		Listener listen = new Listener();//makes listener
+		redSlider.addChangeListener(listen);//adds listeners
+		greenSlider.addChangeListener(listen);
+		blueSlider.addChangeListener(listen);
+		//sets title to panel
 		panel.setBorder(new CompoundBorder(new TitledBorder("Choose colors"),
 				new EmptyBorder(2, 2, 2, 2)));
-		panel.setLayout(new GridLayout(3,2));
+		panel.setLayout(new GridLayout(3,2));//sets grid layout
+		//adds labels and sliders to panel
 		panel.add(redLabel);
-		panel.add(redScrollBar);
+		panel.add(redSlider);
 		panel.add(greenLabel);
-		panel.add(greenScrollBar);
+		panel.add(greenSlider);
 		panel.add(blueLabel);
-		panel.add(blueScrollBar);
-		showColorPanel.setLayout(new BorderLayout());
-		showColorPanel.add(showColor,BorderLayout.CENTER);
+		panel.add(blueSlider);
+		showColorPanel.setLayout(new FlowLayout());
+		showColorPanel.add(showColor);
 		frame.setLayout(new BorderLayout());
-		frame.setSize(300,200);
-		frame.setLocationRelativeTo(null); // makes frame center
 		frame.add(showColorPanel,BorderLayout.CENTER);
 		frame.add(panel,BorderLayout.SOUTH);
+		frame.setSize(300,200);
+		frame.setLocationRelativeTo(null); // makes frame center
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
