@@ -39,8 +39,8 @@ public class BorderLayoutDemo extends JFrame {
 		
 		//Adds panels to frame using border layout
 		frame.setLayout(new BorderLayout());
-		frame.add(panel1,BorderLayout.NORTH);
-		frame.add(panel2,BorderLayout.SOUTH);
+		frame.add(panel2,BorderLayout.NORTH);
+		frame.add(panel1,BorderLayout.SOUTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
