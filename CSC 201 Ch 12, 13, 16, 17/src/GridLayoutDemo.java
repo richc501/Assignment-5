@@ -33,7 +33,6 @@ public class GridLayoutDemo extends JFrame {
 		//////////////////////////////////////////
 		
 		//Adds panels to frame using border layout
-		frame.setLayout(new BorderLayout());
 		frame.add(panel1, BorderLayout.SOUTH);
 		frame.add(panel2, BorderLayout.CENTER);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
