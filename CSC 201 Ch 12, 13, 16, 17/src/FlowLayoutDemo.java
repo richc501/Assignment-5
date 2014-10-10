@@ -1,4 +1,5 @@
 import java.awt.*;
+
 import javax.swing.*;
 //Richard Cunningham
 //Problem Statement
@@ -41,6 +42,7 @@ public class FlowLayoutDemo extends JFrame {
 		frame.setLayout(new FlowLayout());
 		frame.getContentPane().add(panel1);
 		frame.getContentPane().add(panel2);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
 	}

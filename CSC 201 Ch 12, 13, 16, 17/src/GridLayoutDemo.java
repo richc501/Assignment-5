@@ -1,11 +1,4 @@
 import java.awt.*;
-//Richard Cunningham
-//Problem Statement
-//Write a program that meets the following requirements.
-//Create a frame and set its layout to BorderLayout.
-//Create two panels and place one panel in the south of the frame and another panel in the center.
-//Create six buttons and add them into 2 separated panels.
-//Use GridLayout of 2 rows and 2 columns.
 
 import javax.swing.*;
 @SuppressWarnings("serial")
@@ -43,6 +36,7 @@ public class GridLayoutDemo extends JFrame {
 		frame.setLayout(new BorderLayout());
 		frame.add(panel1, BorderLayout.SOUTH);
 		frame.add(panel2, BorderLayout.CENTER);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
 	}
