@@ -39,7 +39,7 @@ public class ATM extends JFrame{
 	public static JButton buttonNum9 = new JButton("9");
 	public static JButton buttonClear = new JButton("Clear");
 	public static JButton buttonNum0 = new JButton("0");
-	public static JButton buttonEnter = new JButton("Enter");
+	public static JButton buttonEnter = new JButton("\u23CE");
 	public static JLabel jblPasscode = new JLabel("Enter Passcode:");
 	public static JPasswordField pinInput = new JPasswordField(4);
 	public int trailsLeft=3;
