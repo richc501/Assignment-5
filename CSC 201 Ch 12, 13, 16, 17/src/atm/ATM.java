@@ -40,9 +40,9 @@ public class ATM extends JFrame{
 	public static JButton buttonClear = new JButton("Clear");
 	public static JButton buttonNum0 = new JButton("0");
 	public static JButton buttonEnter = new JButton("Enter");
-	public static JPasswordField pinInput = new JPasswordField();
+	public static JLabel jblPasscode = new JLabel("Enter Passcode:");
+	public static JPasswordField pinInput = new JPasswordField(4);
 	public int trailsLeft=3;
-	public int trails;
 	public ATM()
 	{
 		setTitle("ATM PIN AUTHENTICATION");
@@ -54,8 +54,10 @@ public class ATM extends JFrame{
 		ATM frame = new ATM();
 		frame.setSize(800, 600);
 		JPanel buttonPanel = new JPanel();
+		JPanel passcodePanel = new JPanel();
 		//Adds buttons to panel
 		buttonPanel.setLayout(new GridLayout(4,3));
+		passcodePanel.setLayout(new GridLayout(2,1));
 		buttonPanel.add(buttonNum1);
 		buttonPanel.add(buttonNum2);
 		buttonPanel.add(buttonNum3);
@@ -68,6 +70,8 @@ public class ATM extends JFrame{
 		buttonPanel.add(buttonClear);
 		buttonPanel.add(buttonNum0);
 		buttonPanel.add(buttonEnter);
+		passcodePanel.add(jblPasscode);
+		passcodePanel.add(pinInput);
 		//adds listeners
 		ButtonAction action = new ButtonAction();
 		ClearAction clearText = new ClearAction();
@@ -85,9 +89,8 @@ public class ATM extends JFrame{
 		buttonClear.addActionListener(clearText);
 		buttonEnter.addActionListener(enterAction);
 		//adds panel and password field to frame
-		frame.setLayout(new BorderLayout());
 		frame.add(buttonPanel,BorderLayout.SOUTH);
-		frame.add(pinInput,BorderLayout.NORTH);
+		frame.add(passcodePanel,BorderLayout.NORTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
