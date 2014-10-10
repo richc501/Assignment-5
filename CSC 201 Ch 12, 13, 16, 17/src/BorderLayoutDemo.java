@@ -23,7 +23,6 @@ public class BorderLayoutDemo extends JFrame {
 		
 		//Adds 3 buttons to panel 1///////////////
 		JPanel panel1 = new JPanel();
-		panel1.setLayout(new FlowLayout());
 		panel1.add(button1);
 		panel1.add(button2);
 		panel1.add(button3);
@@ -31,7 +30,6 @@ public class BorderLayoutDemo extends JFrame {
 		
 		//Adds 3 buttons to panel 2///////////////
 		JPanel panel2 = new JPanel();
-		panel2.setLayout(new FlowLayout());
 		panel2.add(button4);
 		panel2.add(button5);
 		panel2.add(button6);
