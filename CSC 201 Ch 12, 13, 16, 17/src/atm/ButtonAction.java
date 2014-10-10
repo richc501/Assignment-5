@@ -12,8 +12,9 @@ public class ButtonAction extends ATM implements ActionListener
 		String test = pinInput.getText();
 		if(e.getSource()==buttonNum1||e.getSource()==buttonNum2||e.getSource()==buttonNum3||e.getSource()==buttonNum4||e.getSource()==buttonNum5||e.getSource()==buttonNum6||e.getSource()==buttonNum7||e.getSource()==buttonNum8||e.getSource()==buttonNum9||e.getSource()==buttonNum0)
 		{
-			if (test.length()<4)
+			if (test.length()<4)//keeps password field to 4 numbers 
 			{
+				//adds number to password field according to button
 				if(e.getSource()==buttonNum1)
 				{
 					@SuppressWarnings("deprecation")

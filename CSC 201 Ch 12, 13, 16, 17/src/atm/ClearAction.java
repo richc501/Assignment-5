@@ -10,6 +10,7 @@ public class ClearAction extends ATM implements ActionListener
 	public void actionPerformed(ActionEvent e) {
 			if(e.getSource()==buttonClear)
 			{
+				//clears password field
 				pinInput.setText(""); 
 			}
 	}

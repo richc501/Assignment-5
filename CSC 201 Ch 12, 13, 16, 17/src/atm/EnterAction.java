@@ -15,17 +15,16 @@ public class EnterAction extends ATM implements ActionListener {
 		{
 			@SuppressWarnings("deprecation")
 			int pinEntered = Integer.parseInt(pinInput.getText()); 
+			//checks if pin number is correct
 			if(correctPin==pinEntered&&trailsLeft>0)
 				JOptionPane.showMessageDialog(null,"Welcome", "Display Message", JOptionPane.INFORMATION_MESSAGE);
 			else
 			{
-				//trails++;
-				//System.out.println(trails);
+				//only allows three entries
 				if(trailsLeft>=1&&trailsLeft>0)
-					JOptionPane.showMessageDialog(null,"Incorrect Input"+"\n Trails Left= "+trailsLeft, "DisplayMessage", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null,"Incorrect Input"+"\n Trails Left= "+(trailsLeft-1), "DisplayMessage", JOptionPane.ERROR_MESSAGE);
 				pinInput.setText("");
 				trailsLeft--;
-				System.out.println(trailsLeft);
 				if(trailsLeft==0||trailsLeft<0)
 				{
 					JOptionPane.showMessageDialog(null, "Contact Administrator","Display Message", JOptionPane.CLOSED_OPTION);
