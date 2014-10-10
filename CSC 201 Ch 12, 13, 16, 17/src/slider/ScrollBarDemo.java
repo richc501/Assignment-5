@@ -4,7 +4,24 @@ import java.awt.*;
 
 import javax.swing.*;
 import javax.swing.border.*;
-
+//Richard Cunningham
+//Problem Statement
+//Write a program that uses scroll bars to select the foreground color of a label. Three horizontal scroll bars 
+//are used for selecting the color’s red, green, and blue components. Use a title border on the panel that holds the scroll bars.
+//Directions
+//Create a class named ScrollBarDemo extends JFrame.
+//Create user interface using JPanel, JLabel, JScrollBar.
+//Use TitleBorder on the panel that holds the scroll bars (example code below).
+//panel.setBorder(new CompoundBorder(new TitledBorder("Choose colors"),
+//new EmptyBorder(2, 2, 2, 2)));
+//Register listener for the scroll bars
+//Create a class named Listener implements ChangeListener
+//Set the color label based on Red, Green, Blue from the constructor of Color class
+//Set the tile of JFrame to “Scroll Bars Demo”, center the frame, set size to 300 by 200, and make the frame visible
+//Test the program to verify that the foreground color changes in the label as you adjust the scroll bars.
+//Revise the program using JSlider instead of JScrollBar and title the frame to Slider Demo.
+//Provide appropriate Java comments
+//Post your Java source code file and captured output image in Blackboard.
 @SuppressWarnings("serial")
 public class ScrollBarDemo extends JFrame{
 	public static JFrame frame = new JFrame("ScrollBar Demo");
