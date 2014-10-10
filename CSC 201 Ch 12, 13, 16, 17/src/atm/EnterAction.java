@@ -20,7 +20,10 @@ public class EnterAction extends ATM implements ActionListener {
 				int pinEntered = Integer.parseInt(pinInput.getText()); 
 				//checks if pin number is correct and that trails are not out
 				if(correctPin==pinEntered&&trailsLeft>0)
+				{
 					JOptionPane.showMessageDialog(null,"Welcome", "Display Message", JOptionPane.INFORMATION_MESSAGE);
+					pinInput.setText("");
+				}
 				else
 				{
 					//only allows three entries
